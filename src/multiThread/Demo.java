@@ -1,5 +1,5 @@
 package multiThread;
 
-public class T {
+public class Demo {
 
 }
