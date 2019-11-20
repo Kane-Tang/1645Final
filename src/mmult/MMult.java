@@ -1,4 +1,4 @@
-package multiThread;
+package mmult;
 
 import java.util.Scanner;
 import java.util.concurrent.ExecutorService;
