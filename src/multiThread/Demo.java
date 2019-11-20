@@ -1,5 +1,5 @@
 package multiThread;
 
-public class rk4 {
+public class Demo {
 
 }
