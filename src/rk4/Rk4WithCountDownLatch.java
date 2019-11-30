@@ -41,6 +41,8 @@ public class Rk4WithCountDownLatch {
         Rk4WithCountDownLatch testRk4 = new Rk4WithCountDownLatch();
         int len = testRk4.problemSize;
         int size = len / n;
+        double startTime, endTime;
+        startTime=System.nanoTime()/1000000.0;
         Thread thread[] = new Thread[n];
         try {
             for (int i = 0; i < n; i++) {
@@ -77,7 +79,9 @@ public class Rk4WithCountDownLatch {
         for (int i = 0; i < testRk4.problemSize; i++) {
             testRk4.totalSum += testRk4.yout[i];
         }
-        System.out.println(testRk4.totalSum);
+        endTime=System.nanoTime()/1000000.0;
+        System.out.println("Total Sum ="+testRk4.totalSum);
+        System.out.println("Interval length: "+(endTime-startTime));
     }
 }
 
