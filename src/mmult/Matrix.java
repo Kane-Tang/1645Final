@@ -1,6 +1,6 @@
 package mmult;
 
-public class Matrix implements Runnable {
+public class Matrix extends Thread {
 
     private int a[][];
     private int b[][];
@@ -9,6 +9,7 @@ public class Matrix implements Runnable {
     private int end ;
     private int NROW;
 
+    
     public Matrix(int[][] a, int[][] b, int[][] c, int start, int end, int NROW) {
         this.a = a;
         this.b = b;
