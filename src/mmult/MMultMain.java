@@ -7,6 +7,7 @@ import java.util.concurrent.TimeUnit;
 
 public class MMultMain {
 	public void test(int n) throws InterruptedException {
+		
 		int NROW = 1024;
 		int a[][] = new int[NROW][NROW];
 		int b[][] = new int[NROW][NROW];

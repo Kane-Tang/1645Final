@@ -9,6 +9,7 @@ public class Matrix extends Thread {
     private int end ;
     private int NROW;
 
+    
     public Matrix(int[][] a, int[][] b, int[][] c, int start, int end, int NROW) {
         this.a = a;
         this.b = b;
