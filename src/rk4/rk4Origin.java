@@ -1,6 +1,14 @@
 package rk4; 
 
-class testRk4 { 
+class rk4Origin { 
+	
+	public static void main(String args[]) { 
+		rk4Origin d2 = new rk4Origin(); 
+		double x0 = 0, y = 1, x = 2, h = 0.2; 
+		
+		System.out.println("\nThe value of y at x is : " + d2.rungeKutta(x0, y, x, h)); 
+	} 
+	
 	double dydx(double x, double y) 
 	{ 
 		return ((x - y) / 2); 
@@ -8,7 +16,7 @@ class testRk4 {
 	
 	double rungeKutta(double x0, double y0, double x, double h) 
 	{ 
-		testRk4 d1 = new testRk4(); 
+		rk4Origin d1 = new rk4Origin(); 
 		int n = (int)((x - x0) / h); 
 
 		double k1, k2, k3, k4, k5; 
@@ -27,12 +35,6 @@ class testRk4 {
 		} 
 		return y; 
 	} 
-	
-	public static void main(String args[]) { 
-		testRk4 d2 = new testRk4(); 
-		double x0 = 0, y = 1, x = 2, h = 0.2; 
-		
-		System.out.println("\nThe value of y at x is : " + d2.rungeKutta(x0, y, x, h)); 
-	} 
+
 } 
 
