@@ -1,6 +1,5 @@
-package rk4;
+package rk4; 
 
-import java.io.*; 
 class testRk4 { 
 	double dydx(double x, double y) 
 	{ 
