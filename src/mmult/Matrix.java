@@ -1,6 +1,6 @@
 package mmult;
 
-public class Matrix implements Runnable {
+public class Matrix extends Thread {
 
     private int a[][];
     private int b[][];
