@@ -1,4 +1,4 @@
-Name				GitId				PittId
-Kaiyuan Tang: 		rrrcxz				kat137
-Lu Zhang:			LUZ29, 2018zhang	luz29
-Yang Yi:			yiyang68			yiy68
+Name	GitId-PittId
+Kaiyuan Tang: 	rrrcxz-kat137
+Lu Zhang:	LUZ29, 2018zhang-luz29
+Yang Yi:	yiyang68-yiy68
