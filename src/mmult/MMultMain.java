@@ -23,12 +23,11 @@ public class MMultMain {
 		}
 
 		// implements by implements Runnable
+		int localSize = NROW / n;
 		startTime = System.nanoTime() / 1000000.0;
 		ExecutorService threadPool = Executors.newFixedThreadPool(n);
-		for (int i = 0; i < NROW; i++) {
-			for (int j = 0; j < NROW; j++) {
-				threadPool.submit(new MMult(a, b, c, i, j));
-			}
+		for (int i = 0; i < n; i++) {
+			threadPool.submit(new MMult(a, b, c, i * localSize, (i + 1) * localSize - 1));
 		}
 		threadPool.shutdown();
 		threadPool.awaitTermination(1, TimeUnit.DAYS);
@@ -38,8 +37,8 @@ public class MMultMain {
 				totalSum += (double) c[i][j];
 			}
 		}
-		System.out.println("totalSum = " + totalSum);
-		System.out.println("Interval length: " + (endTime - startTime));
+		System.out.println("Matrix Multiplication totalSum = " + totalSum);
+		System.out.println("Interval length for Runnable idea with threadPool: " + (endTime - startTime));
 		
 		for (int i = 0; i < NROW; i++) {
 			for (int j = 0; j < NROW; j++) {
@@ -50,7 +49,7 @@ public class MMultMain {
 		}
 
 		// implements by extends thread
-		int localSize = NROW / n;
+		//int localSize = NROW / n;
 		startTime = System.nanoTime() / 1000000.0;
 		ExecutorService threadPool2 = Executors.newFixedThreadPool(n);
 		for (int i = 0; i < n; i++) {
@@ -65,8 +64,8 @@ public class MMultMain {
 				totalSum += (double) c[i][j];
 			}
 		}
-		System.out.println("totalSum = " + totalSum);
-		System.out.println("Interval length: " + (endTime - startTime));
+		System.out.println("Matirx Multiplication totalSum = " + totalSum);
+		System.out.println("Interval length for Thread idea with threadPool: " + (endTime - startTime));
 	}
 
 	public static void main(String[] args) throws InterruptedException {

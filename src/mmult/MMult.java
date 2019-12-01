@@ -10,22 +10,26 @@ public class MMult implements Runnable{
 	private int[][] a;
 	private int[][] b;
 	private int[][] c;
-	private int row;
-	private int col;
-	public MMult(int[][] a, int[][] b, int[][] c, int row, int col) {
+	private int start;
+	private int end;
+	public MMult(int[][] a, int[][] b, int[][] c, int start, int end) {
 		// TODO Auto-generated constructor stub
 		this.a = a;
 		this.b = b;
 		this.c = c;
-		this.row = row;
-		this.col = col;
+		this.start = start;
+		this.end = end;
 	}
 
 	@Override
 	public void run() {
 		int NROW = 1024;
-		for(int i=0;i<NROW;i++) {
-			c[row][col] += a[row][i]*b[i][col];
-		}
+		for(int i=start; i<=end; i++) {
+            for(int j=0; j<NROW; j++) {
+                for(int k=0; k<NROW; k++) {
+                    c[i][j]+=a[i][k]*b[k][j];
+                }
+            }
+        }
 	}
 }
