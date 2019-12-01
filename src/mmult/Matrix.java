@@ -19,6 +19,7 @@ public class Matrix extends Thread {
         this.NROW=NROW;
     }
 
+    
     @Override
     public void run() {
         for(int i=start; i<=end; i++) {
