@@ -12,6 +12,7 @@ public class RungeKutta implements Runnable {
     private double[][] c;
     private double mysum;
 
+    
     public RungeKutta(int start, int end, int problemSize, CyclicBarrier barrier, double h, double[] y, double[] yt, double[] k1, double[] k2, double[] k3, double[] k4, double[] pow, double[] yout, double[][] c) {
         this.start = start;
         this.end = end;
