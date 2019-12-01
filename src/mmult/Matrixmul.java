@@ -41,8 +41,8 @@ public class Matrixmul {
                 totalSum+=(double)c[i][j];
             }
         }
-        System.out.println("Total Sum ="+totalSum);
-        System.out.println("Interval length: "+(endTime-startTime));
+        System.out.println("Matrix Multiplication Total Sum ="+totalSum);
+        System.out.println("Interval length for Thread idea: "+(endTime-startTime));
 //        Matrixmul m=new Matrixmul();
 //        m.serial(a, b, c, NROW);
     }

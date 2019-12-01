@@ -85,7 +85,7 @@ public class rk4{
 		for(int i=0; i<threadCount; i++) {
 			totalSum+=rk4[i].getMysum();
 		}
-		System.out.println("Total Sum ="+totalSum);
+		System.out.println("rk4 Total Sum ="+totalSum);
 		System.out.println("Interval length: "+(endTime-startTime));
 		//rk4 testRk4 = new rk4();
 		//testRk4.serial(problemSize, h, y, yt, k1, k2, k3, k4, pow, yout, c, totalSum);

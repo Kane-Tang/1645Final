@@ -80,7 +80,7 @@ public class Rk4WithCountDownLatch {
             testRk4.totalSum += testRk4.yout[i];
         }
         endTime=System.nanoTime()/1000000.0;
-        System.out.println("Total Sum ="+testRk4.totalSum);
+        System.out.println("rk4 Total Sum ="+testRk4.totalSum);
         System.out.println("Interval length: "+(endTime-startTime));
     }
 }
